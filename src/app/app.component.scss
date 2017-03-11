@@ -1,109 +1,293 @@
 @import "../colors";
 
+$base: '../assets/';
+@import "../fonts";
+@import "../scss/ionicons";
+
 $height-title: 148px;
 $width-body: 1172px;
 
 $button-height: 34px;
+.body {
+    width: $width-body;
+    margin: 0 auto;
+    font-family: PTSans;
+}
+
+.rounded-corners {
+    border-radius: 25px;
+}
 
 .title {
-  max-width: 2033px;
-  min-width: $width-body;
-  height: $height-title;
-  background-color: $white-three;
-  box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.11);
-  .body {
-
-    width: $width-body;
+    max-width: 2033px;
+    min-width: $width-body;
     height: $height-title;
-    margin: 0 auto;
-    .logotip_scloud {
-      position: relative;
-      float: left;
-      left: 1px;
-      top: 44px;
-      width: 127px;
-      height: 80px;
-      background: url("../assets/images/logotip_scloud.png");
+    background-color: $white-three;
+    box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.11);
+    .body {
+        height: $height-title;
+        .logotip_scloud {
+            position: relative;
+            float: left;
+            left: 1px;
+            top: 44px;
+            width: 127px;
+            height: 80px;
+            background: url("../assets/images/logotip_scloud.png");
+        }
+        .button {
+            position: relative;
+            float: right;
+            right: 2px;
+            top: 48px;
+            width: 175px;
+            height: $button-height;
+            border: none;
+            border-radius: 17px;
+            background-color: $sickly-green;
+            color: $white-two;
+            font-family: PTSans;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+        }
+        .phone {
+            position: relative;
+            float: right;
+            top: 54px;
+            width: 177px;
+            height: 24px;
+            font-family: PTSans;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 24px;
+            letter-spacing: normal;
+            text-align: left;
+            color: $greyish-brown;
+            margin-right: 20px;
+        }
+        #menu {
+            position: relative;
+            top: 110px - $button-height;
+            float: right;
+            right: 7px;
+            width: 987px;
+            height: 17px;
+            font-family: PTSans;
+            font-size: 15px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 17px;
+            letter-spacing: normal;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                text-transform: uppercase;
+                cursor: hand;
+            }
+            display: flex;
+            justify-content: space-between;
+
+            color: $greyish-brown;
+            .select {
+                color: $pumpkin-orange-two;
+
+            }
+
+        }
+
     }
-    .button {
-      position: relative;
-      float: right;
-      right: 2px;
-      top: 48px;
-      width: 175px;
-      height: $button-height;
-      border: none;
-      border-radius: 17px;
-      background-color: $sickly-green;
-      color: $white-two;
-      font-family: PTSans;
-      font-size: 14px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-    }
-    .phone {
-      position: relative;
-      float: right;
-      top: 54px;
-      width: 177px;
-      height: 24px;
-      font-family: PTSans;
-      font-size: 24px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 24px;
-      letter-spacing: normal;
-      text-align: left;
-      color: $greyish-brown;
-    }
-    #menu {
-      position: relative;
-      top: 110px - $button-height;
-      float: right;
-      right: 7px;
-      width: 987px;
-      height: 17px;
-      font-family: PTSans;
-      font-size: 15px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 17px;
-      letter-spacing: normal;
-      text-align: left;
-      margin: 0;
-      padding: 0;
-
-      li {
-        display: inline-block;
-        text-transform: uppercase;
-        cursor: hand;
-      }
-      display: flex;
-      justify-content: space-between;
-
-      color: $greyish-brown;
-      .select {
-        color: $pumpkin-orange-two;
-
-      }
-
-    }
-
-  }
 }
 
 .content {
-  width: 100%;
-  .body {
-    width: $width-body;
-    margin: 0 auto;
+    width: 100%;
+    #block-1 {
+        height: 206px;
 
-  }
+        #text {
+            position: relative;
+            float: left;
+            left: 41px;
+            height: inherit;
+            width: 725px;
+
+            $first-line-height: 29px;
+
+            #first-line {
+                position: relative;
+                float: left;
+                top: 59px;
+                width: inherit;
+                height: 29px;
+                font-family: PTSans;
+                font-size: $first-line-height;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 29px;
+                letter-spacing: normal;
+                text-align: left;
+                color: $greyish-brown;
+            }
+            #second-line {
+                position: relative;
+                float: left;
+                top: 116px - $first-line-height;
+                width: inherit;
+                height: 39px;
+                font-family: PTSans;
+                font-size: 18px;
+                font-weight: normal;
+                font-style: italic;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: $greyish-brown;
+            }
+
+        }
+        #circle {
+            position: relative;
+            float: right;
+            right: 41px;
+            top: 11px;
+            cursor: pointer;
+
+            border-radius: 50%;
+
+            width: 178.8px;
+            height: 178.8px;
+            background-color: $pumpkin-orange;
+            box-shadow: -3px 0px 5px 0 rgba(19, 20, 20, 0.3);
+            border: solid 4px $pumpkin-orange;
+
+            div {
+                color: $white-two;
+                text-align: center;
+            }
+
+            #title {
+                margin: 44px auto 19px auto;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                width: 124px;
+                height: 59px;
+                font-family: PTSans;
+                font-size: 29px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.13;
+                letter-spacing: normal;
+            }
+            #comment {
+                margin: 0 auto;
+                width: 125px;
+                height: 14px;
+                font-family: PTSans;
+                font-size: 14px;
+                font-weight: normal;
+                font-style: italic;
+                font-stretch: normal;
+                line-height: 14px;
+                letter-spacing: normal;
+                text-align: center;
+                color: $white-two;
+
+            }
+
+        }
+    }
+    #block-2 {
+        height: 752px;
+        width: $width-body - 82px;
+        background-color: $white-two;
+        box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.14);
+
+        padding: 0 41px;
+        display: flex;
+        justify-content: space-between;
+        .column {
+            width: 354px;
+        }
+        $height-col-header: 55px;
+        #column-1 div {
+            position: relative;
+            top: $height-col-header;
+        }
+        #slider {
+            width: 352px;
+            height: 142px;
+
+            background-color: $white-two;
+            border: solid 2px $white-ten;
+        }
+        .grey-box {
+            margin-top: 2px;
+            width: 354px;
+            height: 41px;
+            background-color: $white-five;
+        }
+        .coll-header {
+            width: inherit;
+            height: $height-col-header;
+        }
+        .call-data {
+            width: 350px;
+            height: 686px;
+        }
+        #gray-background {
+
+            background-color: $white-four;
+
+        }
+
+        .head {
+            @extend #slider;
+            background-color: transparent;
+            border: none;
+        }
+        .dark-grey-box {
+            text-align: center;
+            line-height: 41px;
+            font-size: 26px;
+            margin: 2px auto 0 auto;
+            width: 314px;
+            height: 41px;
+            background-color: $white-six;
+            i {
+                line-height: 41px;
+                &::before {
+                    line-height: 41px;
+                    font-weight: bold;
+                }
+                &.ion-android-checkmark-circle::before {
+                    color: $snot-green;
+                }
+                &.ion-ios-close-outline {
+                    color: $white-eight
+                }
+            }
+        }
+        .dark-grey-box-3 {
+            @extend .dark-grey-box;
+            background-color: $white-five;
+        }
+
+    }
+    #block-3 {
+        height: 453px;
+    }
 }
 
 .footer {
-  width: 100%;
+    width: 100%;
 }

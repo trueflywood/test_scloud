@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "colors";
+$base: './assets/';
+@import "fonts";
+
+
 body {
   height: auto;
   position: relative;
