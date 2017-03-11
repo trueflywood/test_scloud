@@ -1,0 +1,109 @@
+@import "../colors";
+
+$height-title: 148px;
+$width-body: 1172px;
+
+$button-height: 34px;
+
+.title {
+  max-width: 2033px;
+  min-width: $width-body;
+  height: $height-title;
+  background-color: $white-three;
+  box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.11);
+  .body {
+
+    width: $width-body;
+    height: $height-title;
+    margin: 0 auto;
+    .logotip_scloud {
+      position: relative;
+      float: left;
+      left: 1px;
+      top: 44px;
+      width: 127px;
+      height: 80px;
+      background: url("../assets/images/logotip_scloud.png");
+    }
+    .button {
+      position: relative;
+      float: right;
+      right: 2px;
+      top: 48px;
+      width: 175px;
+      height: $button-height;
+      border: none;
+      border-radius: 17px;
+      background-color: $sickly-green;
+      color: $white-two;
+      font-family: PTSans;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+    }
+    .phone {
+      position: relative;
+      float: right;
+      top: 54px;
+      width: 177px;
+      height: 24px;
+      font-family: PTSans;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 24px;
+      letter-spacing: normal;
+      text-align: left;
+      color: $greyish-brown;
+    }
+    #menu {
+      position: relative;
+      top: 110px - $button-height;
+      float: right;
+      right: 7px;
+      width: 987px;
+      height: 17px;
+      font-family: PTSans;
+      font-size: 15px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 17px;
+      letter-spacing: normal;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        text-transform: uppercase;
+        cursor: hand;
+      }
+      display: flex;
+      justify-content: space-between;
+
+      color: $greyish-brown;
+      .select {
+        color: $pumpkin-orange-two;
+
+      }
+
+    }
+
+  }
+}
+
+.content {
+  width: 100%;
+  .body {
+    width: $width-body;
+    margin: 0 auto;
+
+  }
+}
+
+.footer {
+  width: 100%;
+}
