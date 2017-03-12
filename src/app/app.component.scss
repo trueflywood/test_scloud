@@ -3,6 +3,7 @@
 $base: '../assets/';
 @import "../fonts";
 @import "../scss/ionicons";
+@import "../scss/awesome/font-awesome";
 
 $height-title: 148px;
 $width-body: 1172px;
@@ -51,6 +52,7 @@ $button-height: 34px;
             font-weight: normal;
             font-style: normal;
             font-stretch: normal;
+            cursor: pointer;
         }
         .phone {
             position: relative;
@@ -90,7 +92,7 @@ $button-height: 34px;
             li {
                 display: inline-block;
                 text-transform: uppercase;
-                cursor: hand;
+                cursor: pointer;
             }
             display: flex;
             justify-content: space-between;
@@ -219,7 +221,7 @@ $button-height: 34px;
             width: 354px;
         }
         $height-col-header: 55px;
-        #column-1 div {
+        #column-1 > div {
             position: relative;
             top: $height-col-header;
         }
@@ -235,10 +237,24 @@ $button-height: 34px;
             width: 354px;
             height: 41px;
             background-color: $white-five;
+            display: table;
+
         }
         .coll-header {
             width: inherit;
             height: $height-col-header;
+            text-align: center;
+            line-height: $height-col-header;
+            span {
+                font-family: PTSans;
+                font-size: 13px;
+                font-weight: normal;
+                font-style: italic;
+                font-stretch: normal;
+                letter-spacing: normal;
+                color: $greyish-brown;
+                vertical-align: 2px;
+            }
         }
         .call-data {
             width: 350px;
@@ -253,12 +269,99 @@ $button-height: 34px;
         .head {
             @extend #slider;
             background-color: transparent;
-            border: none;
+            border-color: transparent;
+            div {
+                position: relative;
+                margin: 0 auto;
+                witth: 314px;
+                text-align: center;
+            }
+
+            .name {
+                text-transform: uppercase;
+                top: 8px;
+                height: 19px;
+                font-family: PTSans;
+                font-size: 21px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 0.86;
+                letter-spacing: normal;
+                text-align: center;
+                color: $greyish-brown;
+
+            }
+            .line {
+                top: 10px + 8px ;
+                width: 314.4px;
+                height: 4px;
+                background-color: $pumpkin-orange-three;
+
+            }
+            .subtitle {
+                top: 18px + 10px + 8px;
+                height: 32px;
+                font-family: PTSans;
+                font-size: 16px;
+                font-weight: normal;
+                font-style: italic;
+                font-stretch: normal;
+                line-height: 1.13;
+                letter-spacing: normal;
+                text-align: center;
+                color: $greyish-brown;
+            }
+            .price {
+                top: 18px + 18px + 10px + 8px;
+                height: 23px;
+                font-family: PTSans;
+                font-size: 23px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 0.75;
+                letter-spacing: normal;
+                text-align: center;
+                color: $greyish-brown;
+                .ruble {
+                    margin-left: 5px;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+
+            }
         }
+
+        .ion-android-checkmark-circle::before {
+            color: $snot-green;
+        }
+        .ion-ios-close-outline::before {
+            color: $white-eight
+        }
+        #column-2 .coll-header {
+            .ion-android-checkmark-circle::before {
+               font-size: 20px;
+                margin-right: 6px;
+            }
+        }
+
+        #column-3 .coll-header {
+            .ion-ios-close-outline::before {
+               font-size: 20px;
+                margin-right: 6px;
+            }
+        }
+
+
+        #column-3 .line {
+            background-color: $light-grey;
+        }
+
         .dark-grey-box {
             text-align: center;
             line-height: 41px;
-            font-size: 26px;
+            font-size: 0px;
             margin: 2px auto 0 auto;
             width: 314px;
             height: 41px;
@@ -268,13 +371,9 @@ $button-height: 34px;
                 &::before {
                     line-height: 41px;
                     font-weight: bold;
+                    font-size: 26px;
                 }
-                &.ion-android-checkmark-circle::before {
-                    color: $snot-green;
-                }
-                &.ion-ios-close-outline {
-                    color: $white-eight
-                }
+
             }
         }
         .dark-grey-box-3 {
@@ -285,7 +384,134 @@ $button-height: 34px;
     }
     #block-3 {
         height: 453px;
+        padding: 0 41px;
     }
+}
+
+.v-midle {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 13px;
+
+}
+
+.green-text {
+    color: $leaf;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#column-1 .footer-column {
+    padding-top: 23px;
+    font-size: 13px;
+}
+
+.size {
+    font-family: PTSans;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.13;
+    text-align: center;
+    color: $greyish-brown;
+    line-height: 41px;
+}
+
+#start-use {
+    position: relative;
+    margin: auto;
+    margin-top: 13px;
+    width: 185px;
+    height: 16px;
+    background-color: $pumpkin-orange-three;
+    box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: PTSans;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 11px 0;
+    color: $white-two;
+    cursor: pointer;
+}
+
+#block-3 {
+    padding-top: 17px !important;
+
+    .footnote {
+    font-family: PTSans;
+    font-size: 15px;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.07;
+    text-align: left;
+    color: $greyish-brown;
+
+        &::before {
+            content: '*';
+            font-family: OpenSans;
+            font-size: 24px;
+            font-weight: 800;
+            color: $pumpkin-orange-three;
+        }
+    }
+
+    .conf-box {
+        display: inline-block;
+        width: 346px;
+        height: 36px;
+        background-color: $white-two;
+        box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.14);
+        text-align: center;
+        padding: 17px 0;
+        color: $greyish-brown;
+        .conf-title {
+
+            font-family: PTSans;
+            font-size: 14px;
+            line-height: 14px;
+        }
+        .price {
+            font-family: PTSans;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 20px;
+        }
+        .ruble {
+            font-weight: bold;
+        }
+        .period {
+            height: 12px;
+            font-family: PTSans;
+            font-size: 12px;
+            font-weight: normal
+        }
+    }
+
+    table {
+        width: 100%;
+        th {
+            font-size: 24px;
+            font-weight: bold;
+            color: $greyish-brown;
+        }
+        td {
+            width: 33.33%;
+            padding-top: 14px;
+            text-align: center;
+            &:first-child {
+                text-align: left;
+
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+    table#configs {
+        margin-top: 30px;
+    }
+    table#options {
+        margin-top: 38px;
+    }
+
 }
 
 .footer {
