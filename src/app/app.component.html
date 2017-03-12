@@ -3,7 +3,7 @@
         <div class="logotip_scloud"></div>
         <button class="button">Личный кабинет</button>
         <div class="phone">8 800 555-91-15</div>
-        <ul id="menu">
+        <ul class="menu">
             <li class="select">Тарифы</li>
             <li>подключение</li>
             <li>Партнёрская программа</li>
@@ -40,6 +40,33 @@
         <div id="block-2" class="rounded-corners">
             <div class="column" id="column-1">
                 <div id="slider" class="rounded-corners">
+                    <div id="counter">
+                        <span>Пользователи: </span><button>-</button><input type="number"><button>+</button>
+
+                    </div>
+                    <div id="label">
+                        Цена за:
+                    </div>
+                    <div id="range-container">
+                        <datalist>
+                            <option>&nbsp;&nbsp;&nbsp;1</option>
+                            <option>&nbsp;&nbsp;3</option>
+                            <option>&nbsp;6&nbsp;</option>
+                            <option>12&nbsp;&nbsp;</option>
+                        </datalist>
+                        <input type="range" min="0" max="15" value=5 id="fader" step="5" list="volsettings">
+                        <datalist id="volsettings">
+                            <option>&nbsp;&nbsp;0%</option>
+                            <option>&nbsp;5%</option>
+                            <option>10%</option>
+                            <option>15%</option>
+                        </datalist>
+                    </div>
+                    <div id="range-labels">
+                        <div>месяц</div>
+                        <div>скидка</div>
+                    </div>
+
                 </div>
                 <div class="grey-box">
                     <div class="v-midle">
@@ -348,6 +375,48 @@
                     </td>
                 </tr>
             </table>
+        </div>
+        <div id="block-4">
+            <ul class="menu">
+                <li class="select">Тарифы</li>
+                <li>подключение</li>
+                <li>Партнёрская программа</li>
+                <li>FAQ</li>
+                <li>О компании</li>
+                <li>контакты</li>
+                <li>биржа</li>
+                <li>бухгалтерских услуг</li>
+            </ul>
+            <table>
+                <tr>
+                    <td>
+                        <span>© 2011-2015 ServiceCloud</span><br>
+                        <span>г. Москва, пр-т Вернадского, д. 29</span><br>
+                        <span id="down-phone">8 800 555-91-15</span>
+                    </td>
+                    <td>
+                        <span class="fa-stack fa-lg link">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="fa-stack fa-lg link">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-vk fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="fa-stack fa-lg link">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </td>
+                    <td>
+                        <span>Онлайн чат предоставлен</span>
+                        <span class="green-text-footer">Cleversite</span><br>
+                        <span class="green-number">1/8</span>
+                        <span>- Разработка сайта</span>
+                    </td>
+                </tr>
+            </table>
+
         </div>
     </div>
 </div>

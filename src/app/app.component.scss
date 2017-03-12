@@ -19,6 +19,30 @@ $button-height: 34px;
     border-radius: 25px;
 }
 
+.menu {
+    position: relative;
+    font-family: PTSans;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 17px;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    display: flex;
+    justify-content: space-between;
+
+    color: $greyish-brown;
+    .select {
+        color: $pumpkin-orange-two;
+    }
+
+}
+
 .title {
     max-width: 2033px;
     min-width: $width-body;
@@ -71,21 +95,13 @@ $button-height: 34px;
             color: $greyish-brown;
             margin-right: 20px;
         }
-        #menu {
-            position: relative;
+        .menu {
             top: 110px - $button-height;
             float: right;
             right: 7px;
             width: 987px;
             height: 17px;
-            font-family: PTSans;
-            font-size: 15px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
             line-height: 17px;
-            letter-spacing: normal;
-            text-align: left;
             margin: 0;
             padding: 0;
 
@@ -100,7 +116,6 @@ $button-height: 34px;
             color: $greyish-brown;
             .select {
                 color: $pumpkin-orange-two;
-
             }
 
         }
@@ -226,11 +241,157 @@ $button-height: 34px;
             top: $height-col-header;
         }
         #slider {
-            width: 352px;
+
+            width: 312px;
             height: 142px;
+            padding: 0 20px;
 
             background-color: $white-two;
             border: solid 2px $white-ten;
+
+            datalist {
+                display: flex;
+                justify-content: space-between;
+                option {
+                    display: inline-block;
+                    font-family: PTSans;
+                    font-size: 15.5px;
+                }
+                &:first-child {
+                    padding-bottom: 6px;
+                    option {
+                        font-weight: bold !important;
+                    }
+                }
+                &:last-child {
+                    padding-top: 6px;
+                }
+            }
+            $width-range: 232px;
+            $width-box-range: 254px;
+
+            $radius: 16px;
+            $shadow-radius: 10px;
+            #range-container {
+                position: relative;
+                height: 60px;
+                width: $width-box-range;
+                background-clip: content-box;
+                overflow: hidden;
+                float: left;
+            }
+
+            input[type='range'] {
+                display: block;
+                width: $width-range;
+                -webkit-appearance: none;
+                border-radius: 5px;
+                background-color: $white-seven;
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 33.33%, $white-seven 33.33%, $white-seven);
+                height: 6px;
+                margin: 0 auto;
+                vertical-align: middle;
+            }
+            input[type='range']::-moz-range-track {
+                -moz-appearance: none;
+                border-radius: 5px;
+                background-color: $white-seven;
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 33.33%, $white-seven 33.33%, $white-seven);
+                height: 6px;
+                margin: 0 auto;
+                height: 10px;
+            }
+            $right-shadow-1: ($width-range - 20px)/3;
+            $right-shadow-2: ($width-range - 20px)/3 * 2;
+            $right-shadow-3: ($width-range - 20px)/3 * 3;
+
+            $left-shadow-1: -($width-range - 20px)/3;
+            $left-shadow-2: -($width-range - 20px)/3 * 2;
+            $left-shadow-3: -($width-range - 20px)/3 * 3;
+
+            input[type='range']::-webkit-slider-thumb {
+                -webkit-appearance: none !important;
+                border-radius: 20px;
+                background-color: #FFF;
+                box-shadow: inset 0 0 10px rgba(000, 000, 000, 0.5);
+                border: 1px solid #999;
+                height: 20px;
+                width: 20px;
+                box-shadow: 1px 5px 10px -1px rgba(0, 0, 0, 0.2),
+                $right-shadow-1 0 0 -5px $white-seven,
+                $right-shadow-2 0 0 -5px $white-seven,
+                $right-shadow-3 0 0 -5px $white-seven,
+                $left-shadow-1 0 0 -5px $yellow-orange,
+                $left-shadow-2 0 0 -5px $yellow-orange,
+                $left-shadow-3 0 0 -5px $yellow-orange,
+
+            }
+            input[type='range']::-moz-range-thumb {
+                -moz-appearance: none;
+                border-radius: 20px;
+                background-color: #FFF;
+                box-shadow: inset 0 0 10px rgba(000, 000, 000, 0.5);
+                border: 1px solid #999;
+                height: 20px;
+                width: 20px;
+                box-shadow: 1px 5px 10px -1px rgba(0, 0, 0, 0.2),
+                $right-shadow-1 0 0 -5px $white-seven,
+                $right-shadow-2 0 0 -5px $white-seven,
+                $right-shadow-3 0 0 -5px $white-seven,
+                $left-shadow-1 0 0 -5px $yellow-orange,
+                $left-shadow-2 0 0 -5px $yellow-orange,
+                $left-shadow-3 0 0 -5px $yellow-orange,
+            }
+            #counter {
+                margin-top: 9px;
+                span {
+                    vertical-align: middle;
+                    margin-right: 18px;
+                    font-size: 16px;
+                }
+                button {
+                    vertical-align: middle;
+                    border-radius: 50%;
+                    width: 22px;
+                    height: 22px;
+                    background-color: $white-nine;
+                    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.14);
+                    border: none;
+                    font-family: PTSans;
+                    font-size: 10px;
+                }
+                input {
+                    vertical-align: middle;
+                    width: 58px;
+                    height: 32px;
+                    line-height: 32px;
+                    border: solid 2px $white-ten;
+
+                    font-family: PTSans;
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin: 0 8px;
+                }
+            }
+            #label {
+                margin-top: 3px;
+            }
+            #range-labels {
+                float: right;
+                div {
+                    font-family: PTSans;
+                    font-size: 15.5px;
+                    &:first-child {
+                        padding-bottom: 6px;
+                            font-weight: bold !important;
+                    }
+                    &:last-child {
+                        padding-top: 13px;
+                    }
+                }
+
+            }
         }
         .grey-box {
             margin-top: 2px;
@@ -293,7 +454,7 @@ $button-height: 34px;
 
             }
             .line {
-                top: 10px + 8px ;
+                top: 10px + 8px;
                 width: 314.4px;
                 height: 4px;
                 background-color: $pumpkin-orange-three;
@@ -341,18 +502,17 @@ $button-height: 34px;
         }
         #column-2 .coll-header {
             .ion-android-checkmark-circle::before {
-               font-size: 20px;
+                font-size: 20px;
                 margin-right: 6px;
             }
         }
 
         #column-3 .coll-header {
             .ion-ios-close-outline::before {
-               font-size: 20px;
+                font-size: 20px;
                 margin-right: 6px;
             }
         }
-
 
         #column-3 .line {
             background-color: $light-grey;
@@ -383,8 +543,57 @@ $button-height: 34px;
 
     }
     #block-3 {
-        height: 453px;
+        height: 446px;
         padding: 0 41px;
+    }
+    #block-4 {
+        width: 100%;
+        border-top: solid 2px $sickly-green;
+        height: 134px;
+        .menu {
+            padding: 19px 41px 0px 41px;
+        }
+        table {
+            width: 100%;
+            td {
+                width: 33.33%;
+                text-align: center;
+                font-family: PTSans;
+                font-size: 14px;
+                padding-top: 33px;
+                &:first-child {
+                    padding-top: 28px;
+                    text-align: left;
+
+                    #down-phone {
+                        font-weight: bold;
+                    }
+
+                }
+                &:last-child {
+                    padding-top: 28px;
+                    text-align: right;
+                    .green-text-footer {
+                        color: $leaf-two;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                    .green-number {
+                        color: $white-two;
+                        background-color: $sickly-green;
+                        font-weight: bold;
+                        display: inline-block;
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+        .link {
+            color: $pinkish-grey;
+            cursor: pointer;
+        }
+
     }
 }
 
@@ -400,6 +609,7 @@ $button-height: 34px;
     text-decoration: underline;
     cursor: pointer;
 }
+
 #column-1 .footer-column {
     padding-top: 23px;
     font-size: 13px;
@@ -436,13 +646,13 @@ $button-height: 34px;
     padding-top: 17px !important;
 
     .footnote {
-    font-family: PTSans;
-    font-size: 15px;
-    font-style: italic;
-    font-stretch: normal;
-    line-height: 1.07;
-    text-align: left;
-    color: $greyish-brown;
+        font-family: PTSans;
+        font-size: 15px;
+        font-style: italic;
+        font-stretch: normal;
+        line-height: 1.07;
+        text-align: left;
+        color: $greyish-brown;
 
         &::before {
             content: '*';
@@ -486,15 +696,17 @@ $button-height: 34px;
     }
 
     table {
+        border-spacing: 0;
         width: 100%;
         th {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             color: $greyish-brown;
+            padding: 0px;
         }
         td {
             width: 33.33%;
-            padding-top: 14px;
+            padding: 15px 0px 0px 0px;
             text-align: center;
             &:first-child {
                 text-align: left;
