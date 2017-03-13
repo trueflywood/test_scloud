@@ -82,7 +82,6 @@ $button-height: 34px;
             position: relative;
             float: right;
             top: 54px;
-            width: 177px;
             height: 24px;
             font-family: PTSans;
             font-size: 24px;
@@ -224,6 +223,8 @@ $button-height: 34px;
         }
     }
     #block-2 {
+        opacity: 0.99;
+        z-index: 20;
         height: 752px;
         width: $width-body - 82px;
         background-color: $white-two;
@@ -282,6 +283,7 @@ $button-height: 34px;
             }
 
             input[type='range'] {
+                cursor: pointer;
                 display: block;
                 width: $width-range;
                 -webkit-appearance: none;
@@ -299,8 +301,37 @@ $button-height: 34px;
                 background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 33.33%, $white-seven 33.33%, $white-seven);
                 height: 6px;
                 margin: 0 auto;
-                height: 10px;
             }
+            .pos-0{
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 0%, $white-seven 0%, $white-seven) !important;
+            }
+            .pos-5{
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 33.33%, $white-seven 33.33%, $white-seven) !important;
+
+            }
+            .pos-10{
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 66.66%, $white-seven 66.66%, $white-seven) !important;
+
+            }
+            .pos-15{
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 100%, $white-seven 100%, $white-seven) !important;
+            }
+            .pos-0::-moz-range-track{
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 0%, $white-seven 0%, $white-seven) !important;
+            }
+            .pos-5::-moz-range-track{
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 33.33%, $white-seven 33.33%, $white-seven) !important;
+
+            }
+            .pos-10::-moz-range-track{
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 66.66%, $white-seven 66.66%, $white-seven) !important;
+
+            }
+            .pos-15::-moz-range-track{
+                background-image: linear-gradient(to right, $yellow-orange, $yellow-orange 100%, $white-seven 100%, $white-seven) !important;
+            }
+
+
             $right-shadow-1: ($width-range - 20px)/3;
             $right-shadow-2: ($width-range - 20px)/3 * 2;
             $right-shadow-3: ($width-range - 20px)/3 * 3;
@@ -358,9 +389,13 @@ $button-height: 34px;
                     box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.14);
                     border: none;
                     font-family: PTSans;
-                    font-size: 10px;
+                    font-size: 20px;
+                    line-height: 22px;
+                    font-weight: bolder;
                 }
                 input {
+                    -moz-appearance: textfield;
+                    -webkit-appearance: none;
                     vertical-align: middle;
                     width: 58px;
                     height: 32px;
@@ -372,6 +407,8 @@ $button-height: 34px;
                     font-weight: bold;
                     text-align: center;
                     margin: 0 8px;
+                    &::-webkit-inner-spin-button { -webkit-appearance: none;}
+                    &::-webkit-outer-spin-button { -webkit-appearance: none;}
                 }
             }
             #label {
@@ -728,4 +765,74 @@ $button-height: 34px;
 
 .footer {
     width: 100%;
+}
+
+.cloud {
+    position: absolute;
+
+}
+
+.cloud-1 {
+    background-image: url('../assets/images/cloud-1.png');
+    width: 405px;
+    height: 243px;
+    top: 560px;
+    left: 326px;
+}
+.cloud-2 {
+    background-image: url('../assets/images/cloud-2.png');
+    width: 262px;
+    height: 149px;
+    top: 431px;
+    left: -82px;
+}
+.cloud-3 {
+    background-image: url('../assets/images/cloud-3.png');
+    width: 170px;
+    height: 104px;
+    top: 300px;
+    right: 120px;
+
+}
+.cloud-4 {
+    background-image: url('../assets/images/cloud-4.png');
+    width: 102px;
+    height: 64px;
+    top: 752px;
+    left: 69px;
+}
+.cloud-5 {
+    background-image: url('../assets/images/cloud-5.png');
+    width: 65px;
+    height: 41px;
+    top: 467px;
+    right: 43px;
+}
+.cloud-6 {
+    background-image: url('../assets/images/cloud-6.png');
+    width: 102px;
+    height: 64px;
+    top: 635px;
+    right: 245px;
+}
+.cloud-7 {
+    background-image: url('../assets/images/cloud-7.png');
+    width: 324px;
+    height: 196px;
+    right: -115px;
+    top: 627px;
+}
+.cloud-8 {
+    background-image: url('../assets/images/cloud-8.png');
+    width: 125px;
+    height: 77px;
+    top: 369px;
+    left: 296px;
+}
+.cloud-9 {
+    background-image: url('../assets/images/cloud-9.png');
+    width: 337px;
+    height: 193px;
+    top: 394px;
+    right: 296px;
 }

@@ -1,3 +1,15 @@
+
+<div class="cloud cloud-1"></div>
+<div class="cloud cloud-2"></div>
+<div class="cloud cloud-3"></div>
+<div class="cloud cloud-4"></div>
+<div class="cloud cloud-5"></div>
+<div class="cloud cloud-6"></div>
+<div class="cloud cloud-7"></div>
+<div class="cloud cloud-8"></div>
+<div class="cloud cloud-9"></div>
+
+
 <div class="title">
     <header class="body">
         <div class="logotip_scloud"></div>
@@ -41,7 +53,7 @@
             <div class="column" id="column-1">
                 <div id="slider" class="rounded-corners">
                     <div id="counter">
-                        <span>Пользователи: </span><button>-</button><input type="number"><button>+</button>
+                        <span>Пользователи: </span><button (click)="minus()">-</button><input type="number" min="1" [(ngModel)]="countPiople"><button (click)="plus()">+</button>
 
                     </div>
                     <div id="label">
@@ -54,8 +66,8 @@
                             <option>&nbsp;6&nbsp;</option>
                             <option>12&nbsp;&nbsp;</option>
                         </datalist>
-                        <input type="range" min="0" max="15" value=5 id="fader" step="5" list="volsettings">
-                        <datalist id="volsettings">
+                        <input type="range" min="0" max="15" value=5 id="fader" step="5" [(ngModel)]="range" class="pos-{{range}}">
+                        <datalist>
                             <option>&nbsp;&nbsp;0%</option>
                             <option>&nbsp;5%</option>
                             <option>10%</option>
