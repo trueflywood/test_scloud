@@ -4,12 +4,12 @@
     "license": "MIT",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
+        "start": "ng serve --open true",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "prod": "lite-server --baseDir=\"dist\""
+        "prod": "ng build && lite-server --baseDir=\"dist\""
     },
     "private": true,
     "dependencies": {
